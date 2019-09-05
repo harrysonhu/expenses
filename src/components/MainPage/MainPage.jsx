@@ -1,11 +1,9 @@
-import React from 'react'
-import Button from '@material-ui/core/Button'
+import React from 'react';
+import { ExpenseInput } from '../ExpenseInput';
 
 export const MainPage = () => (
     <>
         <h1>How much are you spending?</h1>
-        <Button variant="contained" color="secondary">
-            Click Here!
-        </Button>
+        <ExpenseInput />
     </>
-)
+);

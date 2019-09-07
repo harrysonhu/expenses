@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -12,6 +13,7 @@ import TextField from '@material-ui/core/TextField';
 export const ExpenseInput = () => {
     const [category, setCategory] = useState('');
     const [storeName, setStoreName] = useState('');
+    const [amount, setAmount] = useState('');
 
     const handleCategoryChange = event => {
         setCategory(event.target.value);
@@ -21,11 +23,15 @@ export const ExpenseInput = () => {
         setStoreName(event.target.value);
     };
 
+    const handleAmountChange = event => {
+        setAmount(event.target.value);
+    };
+
     return (
         <form>
             <FormControl>
-                <Grid container spacing={6}>
-                    <Grid item xs={6}>
+                <Grid alignItems="flex-end" container spacing={4}>
+                    <Grid item xs="auto">
                         <InputLabel htmlFor="category">Category</InputLabel>
                         <Select
                             className={css(styles.formControl)}
@@ -43,13 +49,30 @@ export const ExpenseInput = () => {
                             ))}
                         </Select>
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs="auto">
                         <TextField
                             id="store-name"
                             label="Store Name"
                             value={storeName}
                             onChange={handleStoreNameChange}
                         />
+                    </Grid>
+                    <Grid item xs="auto">
+                        <TextField
+                            id="amount"
+                            label="Amount"
+                            value={amount}
+                            onChange={handleAmountChange}
+                        />
+                    </Grid>
+                    <Grid item xs="auto">
+                        <Button
+                            className={css(styles.addButton)}
+                            size="small"
+                            variant="contained"
+                        >
+                            Add
+                        </Button>
                     </Grid>
                 </Grid>
             </FormControl>

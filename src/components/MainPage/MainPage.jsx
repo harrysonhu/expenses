@@ -1,9 +1,10 @@
 import React from 'react';
 import { ExpenseInput } from '../ExpenseInput';
+import { PageHeader } from '../PageHeader';
 
 export const MainPage = () => (
     <>
-        <h1>How much are you spending?</h1>
+        <PageHeader />
         <ExpenseInput />
     </>
 );

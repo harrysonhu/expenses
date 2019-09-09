@@ -1,6 +1,6 @@
 import React from 'react';
-import { ExpenseInput } from '../ExpenseInput';
-import { PageHeader } from '../PageHeader';
+import { ExpenseInput } from '../ExpenseInput/index';
+import { PageHeader } from '../PageHeader/index';
 
 export const MainPage = () => (
     <>

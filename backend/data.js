@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const DataSchema = new Schema(
     {
         id: String,
-        cateogry: String,
+        category: String,
         businessName: String,
         amount: Number
     },
